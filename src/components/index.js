@@ -1,11 +1,8 @@
 import React from "react";
+import SliderBar from "../common/SliderBar";
 
 function Dashboard() {
-  return (
-    <div>
-      <h1>Dashboard </h1>
-    </div>
-  );
+  return <SliderBar />;
 }
 
 export default Dashboard;
