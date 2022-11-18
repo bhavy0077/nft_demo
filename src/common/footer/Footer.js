@@ -44,7 +44,7 @@ const UseStyle = makeStyles((theme) => ({
     color:Colors.palette.white,
     [theme.breakpoints.down('sm')]:{
       flexDirection:'column',
-      alignItems:'start',
+      alignItems:'start', 
   }
     
   },
