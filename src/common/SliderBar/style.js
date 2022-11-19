@@ -25,13 +25,20 @@ const useStyleSlider = makeStyles((theme) => ({
     maxWidth: "24rem",
     position: "relative",
     border: "1px solid #ccc",
+    borderRadius: '2%',
+    marginBottom:'2rem',
+    boxShadow:  " 0 6px 20px 0 rgba(0, 0, 0, 0.21)"
+    
+  },
+  text:{
+    float:'left'
   },
 
-  cardHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
+  // cardHeader: {
+  //   display: "flex",
+  //   justifyContent: "space-between",
+  //   alignItems: "center",
+  // },
 
   //   cardHeader span: {
   //     color: "#2d3748"
@@ -42,6 +49,7 @@ const useStyleSlider = makeStyles((theme) => ({
     height: "14rem",
     maxWidth: "100%",
     objectFit: "cover",
+      borderRadius: '2%',
   },
 
   //   .card button {

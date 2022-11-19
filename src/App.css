@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+
+}
+body{
+background-image: url('/src/assets/back.jpg');
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .App-logo {

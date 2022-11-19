@@ -5,32 +5,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowLeft, ArrowRight } from "@material-ui/icons";
 import { useStyleSlider } from "./style";
+import { Button } from "@material-ui/core";
+import './style.css'
 
-export default function SliderBar() {
+
+export default function FirstSlider() {
   const [sliderRef, setSliderRef] = useState(null);
   const classes = useStyleSlider();
 
-  const sliderSettings = {
-    arrows: false,
-    slidesToShow: 3,
+  const settings = {
+    arrow: true,
+    dots: true,
+    fade:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    autoplaySpeed: 2000
   };
-
+  
   const hotelCards = [
     {
       imageSrc:
@@ -88,32 +81,30 @@ export default function SliderBar() {
   ];
 
   return (
+    
     <div className={classes.content}>
-      <div className={classes.controls}>
+        <h2> Showcase</h2>
+        {/* <div className={classes.controlsleft}>
         <button className={classes.controlsBtn} onClick={sliderRef?.slickPrev}>
           <ArrowLeft />
         </button>
+        </div>
+        <div className={classes.controlsRight}>
         <button onClick={sliderRef?.slickNext} className={classes.controlsBtn}>
           <ArrowRight />
         </button>
-      </div>
-      <Slider ref={setSliderRef} {...sliderSettings}>
+      </div> */}
+        <Slider {...settings}>
         {hotelCards.map((card, index) => (
-          <div key={index} className={classes.card}>
+          <div key={index} >
             <img
               src={card.imageSrc}
-              alt={card.title}
               className={classes.cardImage}
+             
             />
-            <div className="text-info">
-              <div className={classes.text}>
-                <h2>{card.title}</h2>
-                <span style={{float:'left'}}>{card.pricingText}</span>
-              </div>
-            </div>
           </div>
         ))}
-      </Slider>
+        </Slider>
     </div>
   );
 }
