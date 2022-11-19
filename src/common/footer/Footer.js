@@ -12,9 +12,10 @@ const UseStyle = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    color: Colors.palette.white,
     "&>span": {
       marginBottom: "0.5rem",
-      color: "white",
+      color: Colors.palette.white,
     },
   },
   textRoot:{
@@ -28,7 +29,7 @@ const UseStyle = makeStyles((theme) => ({
     justifyContent: "space-between",
     paddingLeft: "12rem",
     paddingRight: "12rem",
-    background: "#3C58A7",
+    background: Colors.palette.blue,
     paddingTop: "1.5rem",
     paddingBottom: "1.5rem",
     flexDirection: "column",
@@ -104,10 +105,10 @@ const Footer = () => {
           <div style={{ display: "flex", columnGap: 10 }}>
             <IconButton
               style={{
-                background: "#3C58A7",
-                border: "1px solid white",
+                background: Colors.palette.lightBlue,
+                border: `1px solid ${Colors.palette.white}`,
                 padding: 8,
-                color: "white",
+                color: Colors.palette.white,
                 fontSize: 10,
               }}
             >
@@ -115,10 +116,10 @@ const Footer = () => {
             </IconButton>
             <IconButton
               style={{
-                background: "#3C58A7",
-                border: "1px solid white",
+                background: Colors.palette.lightBlue,
+                border: `1px solid ${Colors.palette.white}`,
                 padding: 8,
-                color: "white",
+                color: Colors.palette.white,
                 fontSize: 10,
               }}
             >
@@ -126,10 +127,10 @@ const Footer = () => {
             </IconButton>
             <IconButton
               style={{
-                background: "#3C58A7",
-                border: "1px solid white",
+                background:Colors.palette.lightBlue,
+                border: `1px solid ${Colors.palette.white}`,
                 padding: 8,
-                color: "white",
+                color: Colors.palette.white,
                 fontSize: 10,
               }}
             >
@@ -137,10 +138,10 @@ const Footer = () => {
             </IconButton>
             <IconButton
               style={{
-                background: "#3C58A7",
-                border: "1px solid white",
+                background:Colors.palette.lightBlue,
+                border: `1px solid ${Colors.palette.white}`,
                 padding: 8,
-                color: "white",
+                color: Colors.palette.white,
                 fontSize: 10,
               }}
             >
@@ -148,10 +149,10 @@ const Footer = () => {
             </IconButton>
             <IconButton
               style={{
-                background: "#3C58A7",
-                border: "1px solid white",
+                background: Colors.palette.lightBlue,
+                border: `1px solid ${Colors.palette.white}`,
                 padding: 8,
-                color: "white",
+                color: Colors.palette.white,
                 fontSize: 10,
               }}
             >

@@ -13,6 +13,7 @@ const Colors =
       white: "#F9F7F7",
       gray: "#DBE2EF",
       sky: "#3F72AF",
+      lightBlue: '#3C58A7',
     },
   });
 

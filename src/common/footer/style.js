@@ -3,7 +3,6 @@ import Colors from "../../colors";
 
 const useStyles = makeStyles((theme) => ({
   headerStyle: {
-    // backgroundColor: "#3393FF",
     display: "flex",
     alignItems: "center",
     gap: "30px",

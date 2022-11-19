@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useStyles } from "./style";
+import Colors from "../../colors";
 import {
   Box,
   InputAdornment,
@@ -17,6 +18,10 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
 import MenuIcon from "@material-ui/icons/Menu";
+import HomeIcon from '@material-ui/icons/Home';
+import ContactsIcon from '@material-ui/icons/Contacts';
+import InfoIcon from '@material-ui/icons/Info';
+import PollIcon from '@material-ui/icons/Poll';
 
 const Header = () => {
   const classes = useStyles();
@@ -36,23 +41,45 @@ const Header = () => {
   const list = () => (
     <div
       role="presentation"
+      style={{width: 280}}
       // onClick={toggleDrawer(anchor, false)}
       // onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+      <List style={{paddingLeft: '5%'}}>
+        {/* {["Home", "Contact", "About", "Market"].map((text, index) => (
+          <ListItem button key={text} >
+             <ShoppingCartIcon/>
+            <ListItemText primary={text}  />
           </ListItem>
-        ))}
+        ))} */}
+        <ListItem>
+        <HomeIcon/>
+        <ListItemText style={{marginLeft: '5%'}}>
+          Home
+        </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ContactsIcon/>
+        <ListItemText style={{marginLeft: '5%'}}>
+          Contact
+        </ListItemText>
+        </ListItem>
+        <ListItem>
+        <InfoIcon/>
+        <ListItemText style={{marginLeft: '5%'}}>
+          About 
+        </ListItemText>
+        </ListItem>
+        <ListItem>
+        <PollIcon/>
+        <ListItemText style={{marginLeft: '5%'}}>
+          Market
+        </ListItemText>
+        </ListItem>
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+      <List style={{ paddingLeft: '10%'}}>
+      <Button className={classes.drawerButton}>Connect Wallet</Button>
       </List>
     </div>
   );
@@ -106,7 +133,7 @@ const Header = () => {
           </Box>
         </Box>
       </Box>
-      <Drawer open={drawer} onClose={() => setDrawer(false)}>
+      <Drawer open={drawer} anchor="right" onClose={() => setDrawer(false)}>
         {list()}
       </Drawer>
     </Box>

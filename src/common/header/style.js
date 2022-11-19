@@ -93,10 +93,18 @@ const useStyles = makeStyles((theme) => ({
     connectBtn: {
       display: "none !important",
     },
+    drawerButton:{
+      display: "flex !important",
+      backgroundColor: `${Colors.palette.sky} !important`,
+      color: `${Colors.palette.white} !important`,
+      borderRadius: "50px !important",
+      textTransform: "initial !important",
+    },
+   
     rightHeader: {
       justifyContent: "end",
     },
-  },
+  }
 }));
 
 export { useStyles };
