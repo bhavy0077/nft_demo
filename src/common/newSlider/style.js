@@ -45,16 +45,16 @@ const useStyleSlider = makeStyles((theme) => ({
   article:{
     height:'100%',
     position:'relative',
-    overflow:'hidden'
+    overflow:'hidden',
   },
   header:{
     fontSize: '20px',
-    color: 'white',
-    textAlign: 'center',
+    color: 'black',
+    textAlign: 'start',
     position: 'absolute',
-    top: 0,
+    top: 150,
     bottom: 0,
-    left: 0,
+    left: 10,
     right: 0,
     height: 'fit-content',
     margin: 'auto',

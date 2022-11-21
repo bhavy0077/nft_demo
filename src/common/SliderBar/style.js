@@ -19,21 +19,21 @@ const useStyleSlider = makeStyles((theme) => ({
     margin: "0 auto",
   },
   card: {
-    height: "50vh",
+    height: "60vh",
     display: "flex",
     flexDirection: "column",
-    maxWidth: "24rem",
+    maxWidth: "40rem",
     position: "relative",
     border: "1px solid #ccc",
-    borderRadius: "2%",
-    marginBottom: "2rem",
-    boxShadow: " 0 6px 20px 0 rgba(0, 0, 0, 0.21)",
-    cursor: "pointer",
+    borderRadius: '5%',
+    marginBottom:'2rem',
+    boxShadow:  " 0 6px 20px 0 rgba(0, 0, 0, 0.21)"
+  
   },
   text:{
     float:'left',
     padding:'3px 10px',
-    marginBottom:'1rem'
+    marginBottom:'1rem',
   },
   cardImage: {
     width: "100%",
@@ -41,6 +41,7 @@ const useStyleSlider = makeStyles((theme) => ({
     maxWidth: "100%",
     objectFit: "cover",
     borderRadius: "2%",
+      borderRadius: '5%',
   },
 
   //   .card button {

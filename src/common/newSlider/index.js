@@ -68,3 +68,13 @@ export default function NewSlider({ data }) {
     </>
   );
 }
+{/* <Card key={index} className={classes.card} >
+             <div className={classes.article}>
+             <img
+                src={card.asset_contract?.image_url ?? ""}
+                alt={card.name}
+                className={classes.cardImage}
+              />
+       <h6 className={classes.header}>{card.name}</h6>
+     </div>
+             </Card> */}

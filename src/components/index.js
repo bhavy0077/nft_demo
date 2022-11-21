@@ -26,21 +26,15 @@ function Dashboard() {
 
   return (
     <div>
-      <FirstSlider
-        data={nftMainSlider.filter((ele) => ele?.banner_image_url)}
-      />
+      <FirstSlider data={nftMainSlider.filter((ele) => ele?.banner_image_url)} />
       {nftFeaturedSlider.length ? (
         <SliderBar
-          data={nftFeaturedSlider.filter(
-            (ele) => ele?.asset_contract?.image_url
-          )}
+           data={nftFeaturedSlider.filter((ele) => ele.asset_contract?.image_url)}
         />
       ) : (
         <Skeleton variant="rectangular" width={210} height={118} />
       )}
-      <NewSlider
-        data={nftFeaturedSlider.filter((ele) => ele?.asset_contract?.image_url)}
-      />
+      <NewSlider   data={nftFeaturedSlider.filter((ele) => ele.asset_contract?.image_url)}/>
     </div>
   );
 }

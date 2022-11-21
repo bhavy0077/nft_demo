@@ -16,7 +16,7 @@ export default function SliderBar({ data }) {
   const sliderSettings = {
     arrows: false,
     arrow: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     infinite: true,
@@ -91,6 +91,7 @@ export default function SliderBar({ data }) {
             ))}
         </Slider>
       </div>
+      
     </>
   );
 }
