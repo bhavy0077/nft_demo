@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: Colors.palette.blue,
     color: Colors.palette.white,
   },
-
   mobileMenu: {
     display: "block",
   },

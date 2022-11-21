@@ -18,14 +18,16 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
 import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from '@material-ui/icons/Home';
-import ContactsIcon from '@material-ui/icons/Contacts';
-import InfoIcon from '@material-ui/icons/Info';
-import PollIcon from '@material-ui/icons/Poll';
+import HomeIcon from "@material-ui/icons/Home";
+import ContactsIcon from "@material-ui/icons/Contacts";
+import InfoIcon from "@material-ui/icons/Info";
+import PollIcon from "@material-ui/icons/Poll";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const classes = useStyles();
   const [drawer, setDrawer] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDrawer = (event) => {
     if (
@@ -41,11 +43,11 @@ const Header = () => {
   const list = () => (
     <div
       role="presentation"
-      style={{width: 280}}
+      style={{ width: 280 }}
       // onClick={toggleDrawer(anchor, false)}
       // onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List style={{paddingLeft: '5%'}}>
+      <List style={{ paddingLeft: "5%" }}>
         {/* {["Home", "Contact", "About", "Market"].map((text, index) => (
           <ListItem button key={text} >
              <ShoppingCartIcon/>
@@ -53,47 +55,47 @@ const Header = () => {
           </ListItem>
         ))} */}
         <ListItem>
-        <HomeIcon/>
-        <ListItemText style={{marginLeft: '5%'}}>
-          Home
-        </ListItemText>
+          <HomeIcon />
+          <ListItemText style={{ marginLeft: "5%" }}>Home</ListItemText>
         </ListItem>
         <ListItem>
-        <ContactsIcon/>
-        <ListItemText style={{marginLeft: '5%'}}>
-          Contact
-        </ListItemText>
+          <ContactsIcon />
+          <ListItemText style={{ marginLeft: "5%" }}>Contact</ListItemText>
         </ListItem>
         <ListItem>
-        <InfoIcon/>
-        <ListItemText style={{marginLeft: '5%'}}>
-          About 
-        </ListItemText>
+          <InfoIcon />
+          <ListItemText style={{ marginLeft: "5%" }}>About</ListItemText>
         </ListItem>
         <ListItem>
-        <PollIcon/>
-        <ListItemText style={{marginLeft: '5%'}}>
-          Market
-        </ListItemText>
+          <PollIcon />
+          <ListItemText style={{ marginLeft: "5%" }}>Market</ListItemText>
         </ListItem>
       </List>
       <Divider />
-      <List style={{ paddingLeft: '10%'}}>
-      <Button className={classes.drawerButton}>Connect Wallet</Button>
+      <List style={{ paddingLeft: "10%" }}>
+        <Button className={classes.drawerButton}>Connect Wallet</Button>
       </List>
     </div>
   );
 
   return (
     <Box className={classes.headerStyle}>
-      <h1>LOGO</h1>
+      <h1 style={{ cursor: "pointer" }} onClick={() => navigate("")}>
+        LOGO
+      </h1>
       <Box className={classes.rightHeader}>
         <Box className={classes.headerMenu}>
           <ul className={classes.mainUl}>
-            <li className={classes.link}>Home</li>
-            <li className={classes.link}>Contact</li>
-            <li className={classes.link}>About</li>
-            <li className={classes.link}>Market</li>
+            {["Home", "Contact", "About", "Market"].map((ele) => (
+              <li
+                className={classes.link}
+                onClick={() =>
+                  navigate(ele === "Home" ? "" : ele.toLowerCase())
+                }
+              >
+                {ele}
+              </li>
+            ))}
           </ul>
         </Box>
         <Box className={classes.mainSearch}>

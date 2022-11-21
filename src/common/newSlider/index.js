@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ArrowLeft, ArrowRight } from "@material-ui/icons";
 import { useStyleSlider } from "./style";
 import Card from "../card";
-import cronos from '../../assets/cronos.png'
+import cronos from "../../assets/cronos.png";
 
 export default function NewSlider({ data }) {
   const [sliderRef, setSliderRef] = useState(null);
@@ -33,50 +33,38 @@ export default function NewSlider({ data }) {
       },
     ],
   };
- 
+
   return (
     <>
-    
-    <div className={classes.content}>
-      <div className={classes.controls}>
-        <button className={classes.controlsBtn} onClick={sliderRef?.slickPrev}>
-          <ArrowLeft />
-        </button>
-        <button onClick={sliderRef?.slickNext} className={classes.controlsBtn}>
-          <ArrowRight />
-        </button>
+      <div className={classes.content}>
+        <div className={classes.controls}>
+          <button
+            className={classes.controlsBtn}
+            onClick={sliderRef?.slickPrev}
+          >
+            <ArrowLeft />
+          </button>
+          <button
+            onClick={sliderRef?.slickNext}
+            className={classes.controlsBtn}
+          >
+            <ArrowRight />
+          </button>
+        </div>
+        <h2>Collections</h2>
+        <Slider ref={setSliderRef} {...sliderSettings}>
+          {data &&
+            data.map((card, index) => (
+              <Card key={index} className={classes.card}>
+                <img
+                  src={card.asset_contract?.image_url ?? ""}
+                  alt={card.name}
+                  className={classes.cardImage}
+                />
+              </Card>
+            ))}
+        </Slider>
       </div>
-      <h2>Collections</h2>
-      <Slider ref={setSliderRef} {...sliderSettings}>
-     
-        {/* {hotelCards.map(( card,index) => (
-          <Card key={index} >
-            <img
-              src={card.imageSrc}
-              alt={card.title}
-              className={classes.cardImage}
-            />
-          </Card>
-        ))} */}
-         {data &&
-          data.map((card, index) => (
-          
-            <Card key={index} className={classes.card} >
-              <img
-                src={card.asset_contract?.image_url ?? ""}
-                alt={card.name}
-                className={classes.cardImage}
-              />
-              {console.log('data',card)}
-              
-            </Card>
-            
-          ))}
-        
-       
-      </Slider>
-    </div>
     </>
   );
 }
-
