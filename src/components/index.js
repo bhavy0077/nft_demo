@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import FirstSlider from "../common/firstSlider";
 import SliderBar from "../common/SliderBar";
 import Skeleton from "@material-ui/lab/Skeleton";
+import NewSlider from "../common/newSlider";
 
 function Dashboard() {
   const [nftMainSlider, setNftMainSlider] = useState([]);
@@ -21,11 +22,12 @@ function Dashboard() {
       <FirstSlider data={nftMainSlider.filter((ele) => ele.banner_image_url)} />
       {nftFeaturedSlider.length ? (
         <SliderBar
-          data={nftFeaturedSlider.filter((ele) => ele.asset_contract.image_url)}
+           data={nftFeaturedSlider.filter((ele) => ele.asset_contract.image_url)}
         />
       ) : (
         <Skeleton variant="rectangular" width={210} height={118} />
       )}
+      <NewSlider   data={nftFeaturedSlider.filter((ele) => ele.asset_contract.image_url)}/>
     </div>
   );
 }

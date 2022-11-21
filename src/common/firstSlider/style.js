@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import Colors from "../../colors";
 
 const useStyleSlider = makeStyles((theme) => ({
 
@@ -25,12 +26,13 @@ const useStyleSlider = makeStyles((theme) => ({
   },
   cardImage: {
     height: 500 ,
-    width: 900,
+    width: 1230,
     margin: "0 auto",
-    borderRadius:'5px',
+    borderRadius:'10px',
     position:'relative',
-    boxShadow: " rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
-
+    boxShadow:  " 0px 0px 10px 5px #5F9EA0",
+    marginBottom:'2rem',
+    marginTop:'2rem'
     // width:'100%',
     // height:'50vh'
   },
@@ -69,6 +71,24 @@ const useStyleSlider = makeStyles((theme) => ({
 //    .slides .slick-next{
 //     right:'5%',
 //    }
+article:{
+  height:'100%',
+  position:'relative',
+  overflow:'hidden'
+},
+header:{
+  fontSize: '40px',
+  color: 'white',
+  textAlign: 'center',
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  height: 'fit-content',
+  margin: 'auto',
+  color:'#9867C5'
+},
 
 }));
 

@@ -19,7 +19,7 @@ const useStyleSlider = makeStyles((theme) => ({
     margin: "0 auto",
   },
   card: {
-    height: "50vh",
+    height:'auto',
     display: "flex",
     flexDirection: "column",
     maxWidth: "24rem",
@@ -42,35 +42,25 @@ const useStyleSlider = makeStyles((theme) => ({
     objectFit: "cover",
       borderRadius: '2%',
   },
-
-  //   .card button {
-  //     display: inline-block;
-  //     background-color: #14c8eb;
-  //     color: #fff;
-  //     border: none;
-  //     padding: 1.5em 1.6em;
-  //     cursor: pointer;
-  //     text-decoration: none;
-  //     font-size: 15px;
-  //     font-family: inherit;
-  //     width: 100%;
-  //     position: absolute;
-  //     bottom: 0;
-  //     transition: background-color 0.5s ease-out;
-  //   }
-
-  //   .card button:focus {
-  //     outline: none;
-  //   }
-
-  //   .card button:hover {
-  //     background-color: #0ea8c7;
-  //   }
-
-  //   .text-info {
-  //     padding: 1rem 1.5rem;
-  //     margin-bottom: 2.5rem;
-  //   }
+  article:{
+    height:'100%',
+    position:'relative',
+    overflow:'hidden'
+  },
+  header:{
+    fontSize: '20px',
+    color: 'white',
+    textAlign: 'center',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 'fit-content',
+    margin: 'auto',
+    
+  },
+ 
   controls: {
     display: "flex",
     justifyContent: "end",
